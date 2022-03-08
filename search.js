@@ -4,7 +4,7 @@ function createSearchBar1() {
     form.innerHTML = `
     <form id= "searchForm1">
       <label for="searchGiphy1">Player 1 Giphy Search:</label><br>
-      <input type="text" id="searchGiphy1" name="searchGiphy1"><br>
+      <input type="text" id="searchGiphy1" name="searchGiphy1" placeholder="Choose your character"><br>
       <button type="submit">Search</button>
     </form>
     `;
@@ -28,12 +28,23 @@ function search1() {
                 console.log(giphyObject1);
                 console.log(giphyImage1);
                 let id = 0;
+                display1.innerHTML = '';
                 giphyObject1.forEach((element) => {
                     const img = document.createElement('img');
                     img.id = id;
                     img.src = element.images.fixed_height.url;
                     // let onClickCommand = 'add_player1()';
-                    img.onclick = function add_player1() {};
+                    img.onclick = function add_player1() {
+                        let charcter = element.images.fixed_height.url;
+                        const img = document.createElement('img');
+                        const p = document.createElement('p');
+                        p.innerText = 'Player 1 Gif';
+                        img.src = charcter;
+                        console.log(img);
+                        display1.replaceChildren(p);
+                        display1.appendChild(img);
+                        console.log(charcter);
+                    };
                     console.log(img);
                     display1.appendChild(img);
                     id++;
@@ -48,7 +59,7 @@ function createSearchBar2() {
     form.innerHTML = `
     <form id= "searchForm2">
       <label for="searchGiphy2">Player 2 Giphy Search:</label><br>
-      <input type="text" id="searchGiphy2" name="searchGiphy2"><br>
+      <input type="text" id="searchGiphy2" name="searchGiphy2" placeholder="Choose your character"><br>
       <button type="submit">Search</button>
     </form>
     `;
@@ -72,11 +83,22 @@ function search2() {
                 console.log(giphyObject2);
                 console.log(giphyImage2);
                 let id = 0;
+                display2.innerHTML = '';
                 giphyObject2.forEach((element) => {
                     const img = document.createElement('img');
                     img.id = id;
                     img.src = element.images.fixed_height.url;
-                    img.innerHTML = 'onClick = add_player2()';
+                    img.onclick = function add_player2() {
+                        let charcter = element.images.fixed_height.url;
+                        const img = document.createElement('img');
+                        const p = document.createElement('p');
+                        p.innerText = 'Player 2 Gif';
+                        img.src = charcter;
+                        console.log(img);
+                        display2.replaceChildren(p);
+                        display2.appendChild(img);
+                        console.log(charcter);
+                    };
                     console.log(img);
                     display2.appendChild(img);
                     id++;

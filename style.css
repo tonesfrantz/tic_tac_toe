@@ -14,11 +14,22 @@ body {
     align-content: center;
     margin: 0 auto;
     justify-content: center;
+    gap: 100px;
 }
-.search1 {
+/* .search1 {
     margin-right: 25px;
 }
 .search2 {
+    margin-left: 25px;
+} */
+.player1Box {
+    left: 5px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+.player2Box {
+    right: 5px;
+    margin-top: 20px;
     margin-left: 25px;
 }
 .displayBar {
@@ -28,13 +39,6 @@ body {
     margin: 0 auto;
     justify-content: center;
 }
-
-/* .player1Box {
-    left: 5px;
-}
-.player2Box {
-    right: 5px;
-} */
 
 form {
     gap: 20px;
