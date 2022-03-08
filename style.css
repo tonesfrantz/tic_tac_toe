@@ -1,0 +1,77 @@
+body {
+    display: inline;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(252, 246, 238);
+    font-family: 'Luxurious Roman', cursive;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Shizuru', cursive;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+.search1 {
+    margin-right: 25px;
+}
+.search2 {
+    margin-left: 25px;
+}
+.displayBar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* .player1Box {
+    left: 5px;
+}
+.player2Box {
+    right: 5px;
+} */
+
+form {
+    gap: 20px;
+}
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#searchGiphy1 {
+    margin: 10px;
+}
+#searchGiphy2 {
+    margin: 10px;
+}
+
+.display1 {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    gap: 10px;
+    left: 10px;
+}
+.display2 {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    gap: 10px;
+    right: 10px;
+}
+
+img {
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+footer {
+    margin: 8px;
+}

@@ -21,7 +21,7 @@
 
 ## Design Ideas.
 
--   Create a Tic-Tac-Toe game where users can pick their character from the pokemon API.
+-   Create a Tic-Tac-Toe game where users can pick their giphs from the giphy API.
 -   Have 2 HTML pages. First to pick your character and assign name, second to play the game.
 
 ## Technologies Used
@@ -29,3 +29,4 @@
 -   HTML
 -   JavaScript
 -   CSS
+-   Axios
