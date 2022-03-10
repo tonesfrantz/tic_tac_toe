@@ -17,7 +17,7 @@ function search1() {
         e.preventDefault();
         let searchInput1 = document.getElementById('searchGiphy1').value;
         let display1 = document.querySelector('.display1');
-        console.log(searchInput1);
+        // console.log(searchInput1);
         axios
             .get(
                 `https://api.giphy.com/v1/gifs/search?api_key=tLDNKUKU5FzMzBc6wOme9nAiLLE2CAdg&q=+${searchInput1}&limit=15&offset=0&rating=g&lang=en`
@@ -25,8 +25,8 @@ function search1() {
             .then((response) => {
                 let giphyObject1 = response.data['data'];
                 let giphyImage1 = giphyObject1[0].images.fixed_height.url;
-                console.log(giphyObject1);
-                console.log(giphyImage1);
+                // console.log(giphyObject1);
+                // console.log(giphyImage1);
                 let id = 0;
                 display1.innerHTML = '';
                 giphyObject1.forEach((element) => {
@@ -35,17 +35,31 @@ function search1() {
                     img.src = element.images.fixed_height.url;
                     // let onClickCommand = 'add_player1()';
                     img.onclick = function add_player1() {
+                        let display2 = document.querySelector('.display2');
+                        let childOf2 = display2.firstChild.tagName;
+                        console.log(childOf2);
+                        if (childOf2 === 'P') {
+                            let playModal =
+                                document.getElementById('playModal');
+                            playModal.style.display = 'block';
+                            console.log(playModal);
+                        }
                         let charcter = element.images.fixed_height.url;
                         const img = document.createElement('img');
                         const p = document.createElement('p');
                         p.innerText = 'Player 1 Gif';
+                        const moduleChar =
+                            document.getElementById('player1Character');
+                        moduleChar.src = charcter;
+                        // console.log(moduleChar);
                         img.src = charcter;
-                        console.log(img);
+                        // console.log(img);
                         display1.replaceChildren(p);
                         display1.appendChild(img);
-                        console.log(charcter);
+                        // console.log(charcter);
                     };
-                    console.log(img);
+
+                    // console.log(img);
                     display1.appendChild(img);
                     id++;
                 });
@@ -72,7 +86,7 @@ function search2() {
         e.preventDefault();
         let searchInput2 = document.getElementById('searchGiphy2').value;
         let display2 = document.querySelector('.display2');
-        console.log(searchInput2);
+        // console.log(searchInput2);
         axios
             .get(
                 `https://api.giphy.com/v1/gifs/search?api_key=tLDNKUKU5FzMzBc6wOme9nAiLLE2CAdg&q=+${searchInput2}&limit=15&offset=0&rating=g&lang=en`
@@ -80,8 +94,8 @@ function search2() {
             .then((response) => {
                 let giphyObject2 = response.data['data'];
                 let giphyImage2 = giphyObject2[0].images.fixed_height.url;
-                console.log(giphyObject2);
-                console.log(giphyImage2);
+                // console.log(giphyObject2);
+                // console.log(giphyImage2);
                 let id = 0;
                 display2.innerHTML = '';
                 giphyObject2.forEach((element) => {
@@ -89,17 +103,32 @@ function search2() {
                     img.id = id;
                     img.src = element.images.fixed_height.url;
                     img.onclick = function add_player2() {
+                        let display1 = document.querySelector('.display1');
+                        let childOf1 = display1.firstChild.tagName;
+                        console.log(childOf1);
+                        if (childOf1 === 'P') {
+                            let playModal =
+                                document.getElementById('playModal');
+
+                            playModal.style.display = 'block';
+                            console.log(playModal);
+                        }
                         let charcter = element.images.fixed_height.url;
                         const img = document.createElement('img');
                         const p = document.createElement('p');
                         p.innerText = 'Player 2 Gif';
+                        const moduleChar =
+                            document.getElementById('player2Character');
+                        moduleChar.src = charcter;
+
+                        // console.log(moduleChar);
                         img.src = charcter;
-                        console.log(img);
+                        // console.log(img);
                         display2.replaceChildren(p);
                         display2.appendChild(img);
-                        console.log(charcter);
+                        // console.log(charcter);
                     };
-                    console.log(img);
+                    // console.log(img);
                     display2.appendChild(img);
                     id++;
                 });

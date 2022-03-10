@@ -2,7 +2,8 @@ body {
     display: inline;
     margin: 0 auto;
     text-align: center;
-    background-color: rgb(252, 246, 238);
+    background-color: rgb(26, 25, 25);
+    color: white;
     font-family: 'Luxurious Roman', cursive;
     font-family: 'Mochiy Pop P One', sans-serif;
     font-family: 'Shizuru', cursive;
@@ -15,6 +16,39 @@ body {
     margin: 0 auto;
     justify-content: center;
     gap: 100px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    color: black;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+/* .modal-characters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */
+.modal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
 }
 /* .search1 {
     margin-right: 25px;
